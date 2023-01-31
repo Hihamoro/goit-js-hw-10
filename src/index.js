@@ -2,8 +2,8 @@ import './css/styles.css';
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix';
 import { fetchCountries } from './js/fetchCountries';
-import createOneCountryInfo from './country-info/one-country-info.hbs';
-import createCountryList from './country-info/country-list.hbs';
+import createOneCountryInfo from './counties-list/one-country.hbs';
+import createCountryList from './counties-list/several-countries.hbs';
 
 const DEBOUNCE_DELAY = 300;
 
