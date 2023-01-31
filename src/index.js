@@ -2,8 +2,8 @@ import './css/styles.css';
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix';
 import { fetchCountries } from './js/fetchCountries';
-import createOneCountryInfo from './templates/one-country-info.hbs';
-import createCountryList from './templates/country-list.hbs';
+import createOneCountryInfo from './country-info/one-country-info.hbs';
+import createCountryList from './country-info/country-list.hbs';
 
 const DEBOUNCE_DELAY = 300;
 
@@ -16,8 +16,8 @@ const handleSearchCountry = event => {
   countryListEl.innerHTML = '';
   oneCountryInfoEl.innerHTML = '';
 
-  if (searchQuery === "") {
-    return
+  if (searchQuery === '') {
+    return;
   }
 
   fetchCountries(searchQuery)
